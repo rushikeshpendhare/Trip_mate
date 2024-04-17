@@ -11,12 +11,11 @@ const multer = require("multer");
 const path = require("path");
 // const BASE_URL = process.env.BASE_URL;
 
-
 dotenv.config();
 app.use(express.json())
 app.use(cors());
 app.use("/images",express.static(path.join(__dirname,"/images")));
-const PORT = process.env.PORT || 4000
+const PORT = "https://triipmate.vercel.app/" //process.env.PORT || 4000
 
 mongoose.connect(process.env.MONGO_URL,{
     serverSelectionTimeoutMS: 20000,
